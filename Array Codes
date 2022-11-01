@@ -1,0 +1,18 @@
+// code to find median in a sorted matrix where R and C are rows and column of the matrix and are always odd.
+class Solution {
+    int median(int matrix[][], int R, int C) {
+        // code here   
+        int a[]=new int[R*C];
+        int c=0;
+        for(int i=0;i<R;i++)
+        {
+            for(int j=0;j<C;j++)
+            {
+                a[c]=matrix[i][j];
+                c++;
+            }
+        }
+        Arrays.sort(a);
+        return a[((R*C)-1)/2];
+    }
+}
